@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		about page
+	</title>
+	<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css">
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+DE+SAS+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Sen:wght@400..800&family=Teko:wght@300..700&display=swap" rel="stylesheet"> -->
+
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+		*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		 font-family: "Ubuntu", sans-serif;
+  		font-weight: 300;
+  		font-style:bold;
+	}
+	.head{
+		/*font-family: sans-serif;*/
+		display: flex;
+		padding: 22px;
+		justify-content:space-around;
+		background-color: rgb(250, 177, 22);
+		color: white;
+		align-items: center;
+		position: sticky;
+		top: 0;
+		z-index: 99999;
+	}
+	.head ul li{
+		list-style: none;
+		display: inline;
+		margin: 20px;
+	}
+	.head ul li a{
+		text-decoration: none;
+		color: white;
+		padding: 10px;
+	}
+	.head .nav-right{
+		display: none;
+	}
+/*	.head .navtag{
+		position: relative;
+	bottom: 10px;
+	}*/
+	.hide{
+		display: none;
+	}
+	@media(max-width: 992px)
+	{
+		.head  .navtag{
+			width: 100%;
+			background-color: yellow;
+			position: absolute;
+			top: 80px;
+			left: 0;
+		}
+		.head .navtag ul li{
+			display: flex;
+			text-align: center;
+			margin: 10px 0;		
+			border-top: 1px solid rgba(255, 255,255, 0.2);
+		}
+		.nav-right .hide{
+			display: none;
+		}
+	 	.head .nav-right{
+			display: block;
+		}
+	}
+	
+		h1{
+			text-align: center;
+ /*font-family: "SUSE Mono", sans-serif;*/
+  /*font-optical-sizing: auto;*/
+  /*font-weight: bold;*/
+  /*font-size: 30px;*/
+  /*font-style: normal;*/
+		}
+		span{
+			border-bottom: 10px solid rgb(250, 177, 22); 
+			border-radius: 5px;
+		}
+		.about{
+			display: flex;
+			padding: 20px;
+			gap: 30px;
+		}
+		.left h3{
+			padding: 15px 0;
+		}
+		.left p{
+			padding: 10px 0;
+		}
+		.left button{
+			padding: 10px 20px;
+			background-color:rgb(250, 177, 22);
+			color: white;
+			font-weight: bold;
+			border: none;
+			margin: 20px auto;
+			border-radius: 5px;
+		}
+		.left button:hover{
+			background-color: black;
+			color: white;
+		}
+		.left{
+			margin: 60px 40px;
+			/*padding: 30px;*/
+		}
+		@media (max-width: 768px) {
+
+	    .about {
+	        flex-direction: column;
+	        padding: 0 20px;
+	        gap: 30px;
+	    }
+	    .left,.right {
+	        width: 100%;
+	    }
+	    .right img {
+	        width: 100%;
+	    }
+	}
+	
+		.end{
+		height: 400px;
+		padding: 10px 0;
+		text-align: left;
+		background-color: rgb(37,37,37);
+		color: white;
+		display: flex;
+		justify-content: space-around;
+	}
+	.end .quick{
+		position: relative;
+		top: 40px;
+	}
+	.end .blog{
+		position: relative;
+		top: 30px;
+	}
+	.end .news{
+		position: relative;
+		top: 25px;
+	}
+	.end .quick p{
+		text-align: left;
+		padding: 10px;
+	}
+	.end .blog p{
+		width: 210px;
+		text-align: left;
+		padding: 20px;
+	}
+	.end .blog i{
+		position: relative;
+		left: 20px;
+	}
+	.end .news p{
+  		padding: 20px;
+	}
+	.end .news input{
+
+		background-color:rgb(37, 37, 37);
+		border: 1px solid white;
+		color: white;
+		padding: 10px 20px;
+	}
+	.end .news p{	
+		text-align: left;
+		right: 22px;
+		position: relative;
+	}
+	.end .news button{
+		margin-top: 20px;
+		padding: 10px 20px;
+		color: white;
+		border:none;
+		border-radius: 5px;
+		background-color: rgb(250, 177, 22);
+	}
+	.end .blog i{
+		padding-right: 10px;
+	}
+
+	@media (max-width: 768px) {
+	    .end {
+	    	height: 900px;
+	    	background-color:rgb(37, 37, 37);
+	        flex-direction: column;
+	        padding: 30px;
+	        gap: 35px;
+		    }
+	    .quick,
+	    .blog,
+	    .news {
+background-color:rgb(37, 37, 37);	
+        width: 100%;
+	        text-align: center;
+	    }
+	    .end h1 {
+	        font-size: 22px;
+	    }
+	    .news input {
+	        width: 100%;
+	    }
+	}
+	.pageH{
+		font-size:40px;
+		font-weight:bold;
+
+			}
+	.ctr{
+		border-bottom: 10px solid rgb(250, 177, 22); 
+		border-radius: 5px; 
+		font-size: bold;
+		font-weight: bold;
+	}
+		.end .quick p a{
+		text-decoration: none;
+		color: whitesmoke;
+	}
+	.end .quick p a:hover{
+
+		color: rgb(250, 177, 22);
+	}
+	.head ul li 	a:hover{
+		color: black;
+	}
+	.news button:hover{
+		background-color: white;
+		color: black;
+	}
+	h3{
+		font-weight: bold;
+	}s
+	</style>
+</head>
+<body>
+	<div class="head">
+	<h1 style="font-weight: bold;">ELECTRICCA</h1>
+	<nav class="navtag .hide">
+		<ul>
+			<li>
+				<a href="index.html">HOME</a>
+			</li>
+			<li>
+				<a href="about.html">ABOUT US</a>
+			</li>
+			<li>
+				<a href="services.html">SERVICES</a>
+			</li>
+
+			<li>
+				<a href="test.html">TESTIMONIAL </a>
+			</li>
+			<li>
+				<a href="blog.html">	BLOG</a>
+			</li>
+			<li>
+		     <a href="contact.html">CONTACT US</a>
+		</li>
+		</ul>
+	</nav>
+		<div class="nav-right">
+			<button  class="nav-btn"><i class="fa-solid fa-bars"></i></button>
+		</div>
+</div>
+
+	<h1 style="padding: 10px; margin: 80px 0;" class="pageH">About our ele<span style="font-weight:bold;">ctr</span>ity company </h1>
+	<div class="about">
+	<div class="left">
+		<h3>Slightly belivable. If you are going</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button>READ MORE</button>
+	</div>
+	<div class="right">
+		<img src="new-bulbs.jpg">
+	</div>
+	</div>
+<!-- endpage -->
+
+		<div class="end">
+	<div class="quick">
+		<p style="font-size: 20px; font-weight: bold;">Quick Links</p>
+				<p><a href="index.html">Home</a></p>
+		<p><a  href="about.html">About</a></p>
+		<p><a href="services.html">Services</a></p>
+		<p><a href="blog.html">Blog</a></p>
+		<p><a href="test.html">Testimonial</a></p>
+
+	</div>
+	<div class="blog">
+		<p style="font-size: 20px; font-weight: bold;">Blog</p>
+		<p>There area many variation of passage of lorem ipsum, available but majority have suffered.</p>
+		<i class="fa-brands fa-facebook-f"></i> 
+		<i class="fa-brands fa-twitter"></i>
+		<i class="fa-brands fa-linkedin-in"></i>
+
+	</div>
+	<div class="news">
+		<p style="font-size: 20px; font-weight: bold;">News Letter</p>
+		<input type="email" name="Email" placeholder="Email">
+		<br>
+		<button>
+			SUBSCRIBE
+		</button>
+	</div>
+</div>
+<script>
+		document.querySelector(".nav-btn").onclick=function(){
+			document.querySelector(".navtag").classList.toggle("hide")
+		}
+	</script>
+</body>
+</html>
